@@ -1,25 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Task Scheduler</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOARD // team-proj</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    
-    <body>
-        <div class="header">
-            <div class="header-left">
-                <img class="SidebarBtn" src="Sidebar.png" href="#Sidebar" width = 30>
-            </div>
-            <div class="header-centre">
-                <a href="#default">Team proj</a>
-            </div>
-            <div class="header-right">
-                <a>Home</a>
-                <a href="#signin">Sign in</a>
-            </div>
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="logo">&#9632; TEAM-PROJ</span>
+      <span class="divider">|</span>
+      <span class="board-name">SPRINT-04</span>
+    </div>
+    <nav class="topbar-right">
+      <a href="#">[HOME]</a>
+      <a href="#">[BOARDS]</a>
+      <a href="#">[MEMBERS]</a>
+      <a href="#" class="active">[SIGN IN]</a>
+    </nav>
+  </header>
+
+  <div class="board-bar">
+    <span>BOARD: Alpha Release &nbsp;|&nbsp; 4 columns &nbsp;|&nbsp; 12 cards &nbsp;|&nbsp; updated 2026-03-04</span>
+    <button class="btn">+ ADD COLUMN</button>
+  </div>
+
+  <main class="board" id="board">
+
+    <!-- BACKLOG -->
+    <div class="column" data-col="backlog">
+      <div class="col-header">
+        <span class="col-title">BACKLOG</span>
+        <span class="col-count">4</span>
+      </div>
+      <div class="cards" id="col-backlog">
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0011</div>
+          <div class="card-title">Refactor auth module</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</div>
+          <div class="card-footer">
+            <span class="tag tag-bug">BUG</span>
+            <span class="assignee">@faaris</span>
+          </div>
         </div>
-    </body>
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0012</div>
+          <div class="card-title">Set up CI pipeline</div>
+          <div class="card-body">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</div>
+          <div class="card-footer">
+            <span class="tag tag-feature">FEATURE</span>
+            <span class="assignee">@dev02</span>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0013</div>
+          <div class="card-title">Write API docs</div>
+          <div class="card-body">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+          <div class="card-footer">
+            <span class="tag tag-docs">DOCS</span>
+            <span class="assignee">@dev03</span>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0014</div>
+          <div class="card-title">Migrate DB to Postgres</div>
+          <div class="card-body">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</div>
+          <div class="card-footer">
+            <span class="tag tag-infra">INFRA</span>
+            <span class="assignee">unassigned</span>
+          </div>
+        </div>
+
+      </div>
+      <button class="btn add-card-btn">+ ADD CARD</button>
+    </div>
+
+    <!-- TODO -->
+    <div class="column" data-col="todo">
+      <div class="col-header">
+        <span class="col-title">TODO</span>
+        <span class="col-count">3</span>
+      </div>
+      <div class="cards" id="col-todo">
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0021</div>
+          <div class="card-title">Design landing page</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</div>
+          <div class="card-footer">
+            <span class="tag tag-feature">FEATURE</span>
+            <span class="assignee">@faaris</span>
+          </div>
+        </div>
+
+        <div class="card priority" draggable="true">
+          <div class="card-id">#0022 <span class="priority-flag">!! HIGH</span></div>
+          <div class="card-title">Fix login redirect loop</div>
+          <div class="card-body">Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</div>
+          <div class="card-footer">
+            <span class="tag tag-bug">BUG</span>
+            <span class="assignee">@dev02</span>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0023</div>
+          <div class="card-title">Add unit tests for parser</div>
+          <div class="card-body">Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</div>
+          <div class="card-footer">
+            <span class="tag tag-test">TEST</span>
+            <span class="assignee">@dev03</span>
+          </div>
+        </div>
+
+      </div>
+      <button class="btn add-card-btn">+ ADD CARD</button>
+    </div>
+
+    <!-- IN PROGRESS -->
+    <div class="column" data-col="inprogress">
+      <div class="col-header">
+        <span class="col-title">IN PROGRESS</span>
+        <span class="col-count">3</span>
+      </div>
+      <div class="cards" id="col-inprogress">
+
+        <div class="card priority" draggable="true">
+          <div class="card-id">#0031 <span class="priority-flag">!! HIGH</span></div>
+          <div class="card-title">Implement search endpoint</div>
+          <div class="card-body">Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora.</div>
+          <div class="card-footer">
+            <span class="tag tag-feature">FEATURE</span>
+            <span class="assignee">@faaris</span>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0032</div>
+          <div class="card-title">Update dependency versions</div>
+          <div class="card-body">Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.</div>
+          <div class="card-footer">
+            <span class="tag tag-infra">INFRA</span>
+            <span class="assignee">@dev02</span>
+          </div>
+        </div>
+
+        <div class="card" draggable="true">
+          <div class="card-id">#0033</div>
+          <div class="card-title">Prototype dark mode toggle</div>
+          <div class="card-body">Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci.</div>
+          <div class="card-footer">
+            <span class="tag tag-feature">FEATURE</span>
+            <span class="assignee">@dev03</span>
+          </div>
+        </div>
+
+      </div>
+      <button class="btn add-card-btn">+ ADD CARD</button>
+    </div>
+
+    <!-- DONE -->
+    <div class="column" data-col="done">
+      <div class="col-header">
+        <span class="col-title">DONE</span>
+        <span class="col-count">2</span>
+      </div>
+      <div class="cards" id="col-done">
+
+        <div class="card done" draggable="true">
+          <div class="card-id">#0041</div>
+          <div class="card-title">Init repo and branching strategy</div>
+          <div class="card-body">Aliquam tincidunt mauris eu risus. Vestibulum auctor dapibus neque. Nunc dignissim risus id metus.</div>
+          <div class="card-footer">
+            <span class="tag tag-infra">INFRA</span>
+            <span class="assignee">@faaris</span>
+          </div>
+        </div>
+
+        <div class="card done" draggable="true">
+          <div class="card-id">#0042</div>
+          <div class="card-title">Project kickoff meeting notes</div>
+          <div class="card-body">Cras ornare tristique elit. Vivamus vestibulum ntulla nec ante. Praesent placerat risus quis eros.</div>
+          <div class="card-footer">
+            <span class="tag tag-docs">DOCS</span>
+            <span class="assignee">@dev02</span>
+          </div>
+        </div>
+
+      </div>
+      <button class="btn add-card-btn">+ ADD CARD</button>
+    </div>
+
+  </main>
+
+  <footer class="statusbar">
+    <span>STATUS: OK &nbsp;|&nbsp; DRAG CARDS TO MOVE &nbsp;|&nbsp; v0.1.0</span>
+    <span id="drag-status">&nbsp;</span>
+  </footer>
+
+  <script src="board.js"></script>
+</body>
 </html>
