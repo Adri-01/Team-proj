@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGN IN // team-proj</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 38px - 28px);
+    }
+
+    .login-box {
+      background: var(--bg2);
+      border: 1px solid var(--green-dim);
+      padding: 32px 40px;
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .login-title {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .login-box label {
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .login-box input {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 10px;
+      font-family: monospace;
+      font-size: 13px;
+    }
+
+    .login-box input:focus {
+      outline: none;
+      border-color: var(--green-dim);
+    }
+
+    .login-submit {
+      width: 100%;
+      margin-top: 4px;
+      padding: 8px;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .login-footer {
+      font-size: 10px;
+      color: var(--text-dim);
+      text-align: center;
+    }
+
+    .login-footer a {
+      color: var(--green-dim);
+      text-decoration: none;
+    }
+
+    .login-footer a:hover {
+      color: var(--green);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="logo">&#9632; TEAM-PROJ</span>
+      <span class="divider">|</span>
+      <span class="board-name">SIGN IN</span>
+    </div>
+    <nav class="topbar-right">
+      <a href="index.html">[HOME]</a>
+      <a href="#">[BOARDS]</a>
+      <a href="#">[MEMBERS]</a>
+      <a href="login.html" class="active">[SIGN IN]</a>
+    </nav>
+  </header>
+
+  <div class="login-wrap">
+    <div class="login-box">
+      <div class="login-title">&#9632; SIGN IN</div>
+
+      <div>
+        <label for="username">USERNAME</label>
+        <input type="text" id="username" placeholder="@username" autocomplete="off">
+      </div>
+
+      <div>
+        <label for="password">PASSWORD</label>
+        <input type="password" id="password" placeholder="••••••••">
+      </div>
+
+      <button class="btn login-submit">[ SIGN IN ]</button>
+
+      <div class="login-footer">
+        don't have an account? <a href="#">register</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="statusbar">
+    <span>STATUS: OK &nbsp;|&nbsp; MOCKUP ONLY &nbsp;|&nbsp; v0.1.0</span>
+    <span>&nbsp;</span>
+  </footer>
+
+</body>
+</html>
