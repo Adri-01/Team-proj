@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Form</title>
+  
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+
+      <!-- LEFT SIDE: FORM -->
+      <div class="left">
+        <h2 class="section-title">Task Name</h2>
+        <input type="text" class="input" placeholder="Enter task name">
+
+        <label class="label">Description</label>
+        <textarea class="input textarea" placeholder="Add task description"></textarea>
+
+        <div class="row">
+          <label class="label">Priority:</label>
+          <select class="input select small">
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label class="label">Assign To:</label>
+          <input type="text" class="input small" placeholder="Choose person">
+        </div>
+
+        <div class="row">
+          <label class="label">Due Date:</label>
+          <input type="date" class="input small">
+        </div>
+
+        <div class="row">
+          <label class="label">Status:</label>
+          <select class="input select medium">
+            <option>In Progress</option>
+            <option>Not Started</option>
+            <option>Completed</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label class="label">Date:</label>
+          <input type="date" class="input small">
+        </div>
+
+        <button class="btn-save">Save</button>
+      </div>
+
+      <!-- RIGHT SIDE: PEOPLE -->
+      <div class="right">
+        <h3 class="section-title">People</h3>
+
+        <div class="person-row">
+          <div class="avatar">A</div>
+          <div class="person-line"></div>
+        </div>
+
+        <div class="person-row">
+          <div class="avatar">B</div>
+          <div class="person-line"></div>
+        </div>
+
+        <div class="person-row">
+          <div class="avatar">C</div>
+          <div class="person-line"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
